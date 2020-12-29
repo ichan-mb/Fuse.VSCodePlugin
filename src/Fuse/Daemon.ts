@@ -27,7 +27,12 @@ export class FuseDaemon {
     public buildLogged?: (data: any) => void;
 
     public connect(): void {
-        this.getClient();
+        // spawn daemon if it's killed somehow
+        spawn("fuse", ['daemon']);
+        // fix me: HACK to wait fuse daemon while starting  
+        setTimeout(() => {
+            this.getClient();
+        }, 2000);
     }
 
     public sendRequest<T = any>(data: FuseRequests) {
