@@ -250,14 +250,14 @@
             "</Rectangle>"
         ]
     },
-    "Create Rectangle Close": {
-        "prefix": "rectangleclose",
+    "Create Rectangle background": {
+        "prefix": "rectanglebackground",
         "body": [
             "<Rectangle Layer=\"{1|Background,Overlay|}\" Color=\"${2}\" ux:Name=\"${3}\" CornerRadius=\"${0}\" />"
         ]
     },
-    "Create Rectangle Background": {
-        "prefix": "rectanglebackground",
+    "Create Rectangle Background plus shadow": {
+        "prefix": "rectanglebackgroundshadow",
         "body": [
             "<Rectangle Layer=\"Background\" Color=\"${1}\" CornerRadius=\"${0}\">",
             "\t<Shadow />",
@@ -584,7 +584,7 @@
         "prefix": "webviewurl",
         "body": [
             "<NativeViewHost>",
-            "\t<WebView Url=\"http://www.google.com\">",
+            "\t<WebView Url=\"http://www.google.com${0}\">",
             "\t\t<WhilePageLoading>",
             "\t\t</WhilePageLoading>",
             "\t\t<PageLoaded>",
