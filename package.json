@@ -1,7 +1,7 @@
 {
     "name": "fuse-vscode",
-    "displayName": "Fuse Extension",
-    "description": "Fuse extension for Visual Studio Code. Read more at https://fuseopen.com/",
+    "displayName": "Fuse Open",
+    "description": "no/UX language support and tools for working with Fuse apps. Read more at https://fuseopen.com/",
     "author": "Fuse Open",
     "icon": "images/icon.png",
     "license": "MIT",
@@ -101,6 +101,12 @@
             {
                 "fileMatch": "*.unoproj",
                 "url": "./languages/unoproj.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "ux",
+                "path": "./snippets/ux.json"
             }
         ]
     },
